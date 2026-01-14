@@ -8,7 +8,9 @@ import {
   Globe,
   LayoutTemplate,
   Workflow,
-  Bot
+  Bot,
+  Smartphone,
+  BrainCircuit
 } from 'lucide-react';
 
 export const HERO_TITLES = [
@@ -42,12 +44,12 @@ export const EXPERIENCE: Experience[] = [
 export const SKILLS: Skill[] = [
   { name: 'n8n', category: 'core', icon: <Workflow size={16} /> },
   { name: 'Python', category: 'core', icon: <Terminal size={16} /> },
-  { name: 'AI API Management', category: 'core', icon: <Bot size={16} /> },
+  { name: 'Generative AI', category: 'core', icon: <Bot size={16} /> },
   { name: 'Web Scraping', category: 'core', icon: <Globe size={16} /> },
-  { name: 'Automations', category: 'core', icon: <Workflow size={16} /> },
-  { name: 'Flutter', category: 'dev', icon: <LayoutTemplate size={16} /> },
-  { name: 'Next.js', category: 'dev', icon: <Globe size={16} /> },
-  { name: 'Docker', category: 'dev', icon: <Cpu size={16} /> },
-  { name: 'SQL', category: 'dev', icon: <Database size={16} /> },
+  { name: 'Agentic Workflows', category: 'core', icon: <Workflow size={16} /> },
+  { name: 'React Native', category: 'dev', icon: <Smartphone size={16} /> },
+  { name: 'TensorFlow', category: 'dev', icon: <BrainCircuit size={16} /> },
+  { name: 'Node.js', category: 'dev', icon: <Cpu size={16} /> },
+  { name: 'Firebase', category: 'dev', icon: <Database size={16} /> },
   { name: 'Selenium', category: 'dev', icon: <Globe size={16} /> }
 ];

@@ -5,6 +5,7 @@ import Skills from './Skills';
 import WorkflowVisualizer from './WorkflowVisualizer';
 import MapsWorkflowVisualizer from './MapsWorkflowVisualizer';
 import RayaAiVisualizer from './RayaAiVisualizer';
+import DataInstructionVisualizer from './DataInstructionVisualizer';
 import { ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 
 const BentoGrid: React.FC = () => {
@@ -32,6 +33,13 @@ const BentoGrid: React.FC = () => {
       description: 'AI-powered skincare analysis mobile app.',
       color: 'bg-pink-500',
       component: <RayaAiVisualizer />
+    },
+    {
+      id: 'data-tool',
+      title: 'Data Instruction Tool',
+      description: 'AI-driven ETL & Classification Engine.',
+      color: 'bg-cyan-500',
+      component: <DataInstructionVisualizer />
     }
   ];
 
@@ -63,7 +71,7 @@ const BentoGrid: React.FC = () => {
                 {/* Header / Trigger Card */}
                 <button
                   onClick={() => toggleProject(project.id)}
-                  className={`w-full text-left p-6 md:p-8 rounded-3xl border transition-all duration-300 group relative overflow-hidden
+                  className={`w-full text-left p-5 md:p-8 rounded-3xl border transition-all duration-300 group relative overflow-hidden
                                         ${activeProject === project.id
                       ? 'bg-slate-100 dark:bg-white/5 border-slate-200 dark:border-white/10 mb-6 shadow-lg'
                       : 'glass-card hover:bg-slate-50 dark:hover:bg-white/5 border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/20'
@@ -71,7 +79,7 @@ const BentoGrid: React.FC = () => {
                 >
                   <div className="flex items-center justify-between relative z-10">
                     <div>
-                      <h3 className={`font-display text-2xl font-bold mb-2 transition-colors ${activeProject === project.id ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-gray-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                      <h3 className={`font-display text-xl md:text-2xl font-bold mb-2 transition-colors ${activeProject === project.id ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-gray-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
                         {project.title}
                       </h3>
                       <p className="text-slate-500 dark:text-gray-400 text-sm md:text-base">
@@ -134,8 +142,8 @@ const BentoGrid: React.FC = () => {
           </div>
 
           {/* Right-Side Sticky Scroll Indicator */}
-          <div className="hidden lg:block w-24 relative">
-            <div className="sticky top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 py-8 border-l border-slate-200 dark:border-white/5 pl-8">
+          <div className="hidden lg:block w-24 relative border-l border-slate-200 dark:border-white/5 ml-8">
+            <div className="sticky top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 py-8 -ml-[1px]">
               {MAJOR_PROJECTS.map((project) => (
                 <button
                   key={project.id}
@@ -160,6 +168,7 @@ const BentoGrid: React.FC = () => {
                                         ${activeProject === project.id && project.id === 'linkedin' ? 'bg-neon shadow-neon/50' : ''}
                                         ${activeProject === project.id && project.id === 'maps' ? 'bg-orange-500 shadow-orange-500/50' : ''}
                                         ${activeProject === project.id && project.id === 'raya' ? 'bg-pink-500 shadow-pink-500/50' : ''}
+                                        ${activeProject === project.id && project.id === 'data-tool' ? 'bg-cyan-500 shadow-cyan-500/50' : ''}
                                      `}></div>
 
                   {/* Connecting Line (Optional, or handled by border-l parent) */}

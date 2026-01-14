@@ -13,6 +13,7 @@ Transitioning the portfolio from a static single-page app to a multi-page experi
     - Added "Web Scraping" and "Automations" to skills.
     - Added "Web Scraping" and "Automations" to skills.
     - Cleared generic projects from `constants.tsx` to focus on the Workflow Visualizer.
+- **About Page**: Created `pages/About.tsx`. Updated content to remove "Open to Work" and reflect "Computer Engineering" degree.
 - **Workflow Visualizer Update**: Enhanced the visual design with a dot grid background, centered nodes, and more prominent "n8n-style" editor aesthetics.
 - **Light Mode Refined**: Completed "Ultra-Think" polish.
     - Fixed contrast issues (white-on-white text).
@@ -28,7 +29,11 @@ Transitioning the portfolio from a static single-page app to a multi-page experi
     - Created `RayaAiVisualizer` (Pink/Rose beauty-tech theme) simulating a mobile skin scan.
     - Created `RayaAI` detail page focusing on Gemini Vision/OpenAI integration.
     - Added to BentoGrid layout and routing.
+- **New Project**: Added **Data Instruction Tool** (ML/Python ETL).
+    - Created `DataInstructionVisualizer` (Cyan/Blue data theme) mimicking a terminal console with ML steps.
+    - Created `DataInstructionTool` detail page highlighting AsyncIO, Parallel Processing, and TF-IDF/Gemini.
 - **Contact Info**: Updated LinkedIn URL to correct profile.
+- **Tech Stack Alignment**: Updated `constants.tsx` and `techContext.md` to accurately reflect technologies used in recent projects (Gemini, TensorFlow, React Native, n8n).
 
 ## Next Steps
 - **Add More Case Studies**: Create pages/visuals for other key projects (as hinted by "We'll continue with the other projects afterwards").

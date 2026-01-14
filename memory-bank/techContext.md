@@ -7,6 +7,12 @@
 - **Routing**: React Router DOM
 - **Icons**: Lucide React
 
+## Projects Tech Stack
+- **AI/ML**: Gemini Pro/Vision, OpenAI API, TensorFlow Lite, TF-IDF
+- **Automation**: n8n, Selenium, Pulse (Custom), Google CSE
+- **Mobile**: React Native, Flutter
+- **Backend/Data**: Python (AsyncIO), Node.js, Firebase, SQL
+
 ## Development Environment
 - **Package Manager**: npm
 - **Build Tool**: Vite (fast HMR)

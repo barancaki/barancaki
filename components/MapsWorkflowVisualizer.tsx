@@ -87,17 +87,20 @@ const MapsWorkflowVisualizer: React.FC = () => {
             </div>
 
             {/* Workflow Graphic Area */}
-            <div className="relative py-16 px-4 bg-slate-50 dark:bg-void/30 rounded-2xl border border-slate-200 dark:border-white/5 overflow-x-auto min-h-[300px] flex items-center justify-center bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] [background-size:16px_16px]">
-                {/* Connection Line */}
+            <div className="relative py-16 px-4 bg-slate-50 dark:bg-void/30 rounded-2xl border border-slate-200 dark:border-white/5 min-h-[300px] flex items-center justify-center bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] [background-size:16px_16px]">
+                {/* Horizontal Connection Line (Desktop) */}
                 <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-red-200 via-orange-300 to-yellow-200 dark:from-red-900 dark:via-orange-700 dark:to-yellow-900 -translate-y-1/2 hidden md:block z-0"></div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 min-w-[800px] md:min-w-0 w-full px-8">
+                {/* Vertical Connection Line (Mobile) */}
+                <div className="absolute top-0 left-1/2 h-full w-0.5 bg-gradient-to-b from-red-200 via-orange-300 to-yellow-200 dark:from-red-900 dark:via-orange-700 dark:to-yellow-900 -translate-x-1/2 md:hidden z-0"></div>
+
+                <div className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8 relative z-10 w-full px-4 md:px-8">
                     {WORKFLOW_NODES.map((node, index) => (
                         <React.Fragment key={node.id}>
                             {/* Node */}
                             <button
                                 onClick={() => setActiveNode(node.id)}
-                                className={`flex flex-col items-center gap-4 group/node transition-all duration-300 relative ${activeNode === node.id || (!activeNode && index === 0) ? 'scale-110 -translate-y-2' : 'hover:scale-105 opacity-60 hover:opacity-100 hover:-translate-y-1'}`}
+                                className={`flex flex-col items-center gap-4 group/node transition-all duration-300 relative ${activeNode === node.id || (!activeNode && index === 0) ? 'scale-110' : 'hover:scale-105 opacity-60 hover:opacity-100'}`}
                             >
                                 <div
                                     className={`w-20 h-20 rounded-2xl bg-white dark:bg-void border-2 flex items-center justify-center shadow-xl transition-all duration-500 z-10 relative
@@ -110,7 +113,7 @@ const MapsWorkflowVisualizer: React.FC = () => {
                                         {node.icon}
                                     </span>
                                 </div>
-                                <span className={`text-base font-medium absolute -bottom-10 whitespace-nowrap ${activeNode === node.id || (!activeNode && index === 0) ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-gray-500'}`}>
+                                <span className={`text-base font-medium absolute top-24 md:-bottom-10 whitespace-nowrap md:whitespace-normal text-center bg-slate-50/90 dark:bg-void/90 md:bg-transparent px-2 md:px-0 rounded py-1 md:py-0 ${activeNode === node.id || (!activeNode && index === 0) ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-gray-500'}`}>
                                     {node.title}
                                 </span>
 

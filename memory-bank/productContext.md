@@ -1,4 +1,5 @@
 # Product Context
+> Educational Background: Computer Engineering (Istanbul Health and Technology University)
 
 ## Purpose
 This portfolio serves as the digital business card and proof-of-work for Baran Çakı. It aims to bridge the gap between technical complexity (AI, Automation) and business value (Leads, Efficiency).

@@ -13,10 +13,13 @@
 - [x] Certificates Section (with sliding logos)
 - [x] Raya AI - Skin Analysis Project (Visualizer + Page)
 - [x] Project Section Refactoring (Accordion Layout + Scroll Spy)
+- [x] Data Instruction Tool (Visualizer + Page)
+- [x] UI Polish: Right-side scroll alignment & Header buttons
+- [x] Data Instruction Tool Fixes (Text Visibility & Link)
 
 ## In Progress
 - [ ] Adding more case studies for other projects (if requested)
-- [ ] Refinement of mobile layout for the Workflow Visualizer
+- [x] Refinement of mobile layout for the Workflow Visualizer (Vertical Stack)
 
 ## Known Issues
 - None currently reported.
