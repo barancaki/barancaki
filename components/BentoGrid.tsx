@@ -1,0 +1,176 @@
+import React, { useState, useEffect } from 'react';
+import { PROJECTS } from '../constants';
+import ProjectCard from './ProjectCard';
+import Skills from './Skills';
+import WorkflowVisualizer from './WorkflowVisualizer';
+import MapsWorkflowVisualizer from './MapsWorkflowVisualizer';
+import RayaAiVisualizer from './RayaAiVisualizer';
+import { ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
+
+const BentoGrid: React.FC = () => {
+  const [activeProject, setActiveProject] = useState<string | null>(null);
+
+  // Initial project list for our "Major" projects
+  const MAJOR_PROJECTS = [
+    {
+      id: 'linkedin',
+      title: 'LinkedIn Lead Gen Engine',
+      description: 'Autonomous n8n workflow for scraping and enrichment.',
+      color: 'bg-neon',
+      component: <WorkflowVisualizer />
+    },
+    {
+      id: 'maps',
+      title: 'Google Maps Scraper',
+      description: 'Zero-cost hyper-local business data harvesting.',
+      color: 'bg-orange-500',
+      component: <MapsWorkflowVisualizer />
+    },
+    {
+      id: 'raya',
+      title: 'Raya AI (Beta)',
+      description: 'AI-powered skincare analysis mobile app.',
+      color: 'bg-pink-500',
+      component: <RayaAiVisualizer />
+    }
+  ];
+
+  const toggleProject = (id: string) => {
+    if (activeProject === id) {
+      setActiveProject(null);
+    } else {
+      setActiveProject(id);
+    }
+  };
+
+  return (
+    <section id="projects" className="py-20 relative">
+      <div className="container mx-auto px-6 relative">
+        <div className="mb-12">
+          <h2 className="font-display text-4xl font-bold mb-4 text-slate-900 dark:text-white">Selected Work</h2>
+          <p className="text-slate-600 dark:text-gray-400">Architecting intelligent systems and digital workers.</p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Project Stack */}
+          <div className="flex-1 space-y-8">
+            {MAJOR_PROJECTS.map((project, index) => (
+              <div
+                key={project.id}
+                id={`project-${project.id}`}
+                className={`transition-all duration-500 ${activeProject === project.id ? '' : ''}`}
+              >
+                {/* Header / Trigger Card */}
+                <button
+                  onClick={() => toggleProject(project.id)}
+                  className={`w-full text-left p-6 md:p-8 rounded-3xl border transition-all duration-300 group relative overflow-hidden
+                                        ${activeProject === project.id
+                      ? 'bg-slate-100 dark:bg-white/5 border-slate-200 dark:border-white/10 mb-6 shadow-lg'
+                      : 'glass-card hover:bg-slate-50 dark:hover:bg-white/5 border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/20'
+                    }`}
+                >
+                  <div className="flex items-center justify-between relative z-10">
+                    <div>
+                      <h3 className={`font-display text-2xl font-bold mb-2 transition-colors ${activeProject === project.id ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-gray-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-500 dark:text-gray-400 text-sm md:text-base">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div className={`p-3 rounded-full transition-all duration-300 ${activeProject === project.id ? 'bg-slate-200 dark:bg-white/10 rotate-180' : 'bg-slate-100 dark:bg-white/5 group-hover:bg-slate-200 dark:group-hover:bg-white/10'}`}>
+                      <ChevronDown className={`transition-colors ${activeProject === project.id ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-gray-400'}`} />
+                    </div>
+                  </div>
+
+                  {/* Progress Bar Line for aesthetics */}
+                  {activeProject === project.id && (
+                    <div className={`absolute bottom-0 left-0 h-1 transition-all duration-1000 w-full ${project.color}`} />
+                  )}
+                </button>
+
+                {/* Expanded Content Area */}
+                <div className={`grid transition-all duration-500 ease-in-out overflow-hidden ${activeProject === project.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                  <div className="min-h-0">
+                    {/* Wrapper to handle Grid layouts within the flex container */}
+                    {project.id === 'raya' ? (
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <div className="lg:col-span-8">
+                          {project.component}
+                        </div>
+                        {/* Raya Beta Message - Empty Space Filler */}
+                        <div className="lg:col-span-4 flex flex-col justify-center h-full min-h-[200px] glass-card p-8 rounded-3xl border-dashed border-2 border-pink-300/30 dark:border-pink-500/20 bg-pink-50/50 dark:bg-pink-500/5">
+                          <div className="mb-4 p-3 w-fit rounded-full bg-pink-100 dark:bg-pink-500/10 text-pink-600 dark:text-pink-400">
+                            <MessageCircle size={24} />
+                          </div>
+                          <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Private Beta Access</h4>
+                          <p className="text-slate-600 dark:text-gray-400 mb-6 leading-relaxed">
+                            Raya AI is currently in closed beta testing. We are refining the computer vision models before public release.
+                          </p>
+                          <p className="text-sm font-medium text-slate-500 dark:text-gray-500 mb-4">Interested in early access?</p>
+                          <a href="#contact" className="inline-flex justify-center items-center py-3 px-6 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:opacity-90 transition-opacity">
+                            Contact for Demo
+                          </a>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="w-full">
+                        {project.component}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <div className="pt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Minor Projects Loop (if any in constants) */}
+              {PROJECTS.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+
+            <Skills />
+          </div>
+
+          {/* Right-Side Sticky Scroll Indicator */}
+          <div className="hidden lg:block w-24 relative">
+            <div className="sticky top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 py-8 border-l border-slate-200 dark:border-white/5 pl-8">
+              {MAJOR_PROJECTS.map((project) => (
+                <button
+                  key={project.id}
+                  onClick={() => {
+                    setActiveProject(project.id);
+                    const el = document.getElementById(`project-${project.id}`);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }}
+                  className="group relative flex items-center"
+                >
+                  {/* Tooltip Label */}
+                  <span className={`absolute right-full mr-4 px-2 py-1 rounded bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold whitespace-nowrap opacity-0 transition-all duration-300 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 ${activeProject === project.id ? 'opacity-100 translate-x-0' : ''}`}>
+                    {project.title}
+                  </span>
+
+                  {/* Dot Indicator */}
+                  <div className={`w-3 h-3 rounded-full transition-all duration-500
+                                        ${activeProject === project.id
+                      ? `${project.color.replace('bg-', 'bg-')} scale-125 shadow-[0_0_15px_currentColor]` // Simple logic, might need specific colors
+                      : 'bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-500'
+                    }
+                                        ${activeProject === project.id && project.id === 'linkedin' ? 'bg-neon shadow-neon/50' : ''}
+                                        ${activeProject === project.id && project.id === 'maps' ? 'bg-orange-500 shadow-orange-500/50' : ''}
+                                        ${activeProject === project.id && project.id === 'raya' ? 'bg-pink-500 shadow-pink-500/50' : ''}
+                                     `}></div>
+
+                  {/* Connecting Line (Optional, or handled by border-l parent) */}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BentoGrid;
