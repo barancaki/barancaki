@@ -51,6 +51,7 @@ const Navbar: React.FC = () => {
         <div className={`glass-card rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'bg-void/80 dark:bg-void/80' : 'bg-transparent border-transparent shadow-none'}`}>
 
           {/* Logo */}
+          {/* Logo */}
           <a href="/" className="font-display font-bold text-xl tracking-tighter hover:text-cyan-400 dark:text-white text-slate-900 transition-colors">
             BARAN<span className="text-neon">.AI</span>
           </a>
