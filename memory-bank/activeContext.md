@@ -34,6 +34,15 @@ Transitioning the portfolio from a static single-page app to a multi-page experi
     - Created `DataInstructionTool` detail page highlighting AsyncIO, Parallel Processing, and TF-IDF/Gemini.
 - **Contact Info**: Updated LinkedIn URL to correct profile.
 - **Tech Stack Alignment**: Updated `constants.tsx` and `techContext.md` to accurately reflect technologies used in recent projects (Gemini, TensorFlow, React Native, n8n).
+- **Deployment Ready**: 
+    - Created `Dockerfile` with multi-stage build (Node 20 + Nginx Alpine)
+    - Created `nginx.conf` for SPA routing, compression, caching, security headers
+    - Created `.dockerignore` for optimized builds
+    - Created `docker-compose.yml` for local testing
+    - Created comprehensive `README.md` and `DEPLOYMENT.md` guides
+    - Created GitHub Actions workflow for automated build testing
+    - Project ready for Coolify deployment via Git or Docker
+
 
 ## Next Steps
 - **Add More Case Studies**: Create pages/visuals for other key projects (as hinted by "We'll continue with the other projects afterwards").

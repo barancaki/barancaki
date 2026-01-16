@@ -24,6 +24,15 @@
 ## Known Issues
 - None currently reported.
 
+## Deployment
+- [x] Dockerfile created (multi-stage build)
+- [x] Nginx configuration for SPA routing
+- [x] Docker Compose for local testing
+- [x] .dockerignore optimization
+- [x] Deployment documentation (README.md, DEPLOYMENT.md)
+- [x] GitHub Actions workflow for build testing
+- [x] Ready for Coolify deployment
+
 ## Upcoming
 - Potential integration of a real backend or form handling for the "Contact" section (currently `mailto` or static).
 - SEO optimization (meta tags).
