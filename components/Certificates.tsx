@@ -10,6 +10,11 @@ interface Certificate {
 
 const CERTIFICATES: Certificate[] = [
     {
+        name: "Create Generative AI Apps on Google Cloud",
+        issuer: "Google",
+        logo: "google",
+    },
+    {
         name: "Introduction to Generative AI",
         issuer: "Google",
         logo: "google",
