@@ -29,12 +29,12 @@ const DataInstructionTool: React.FC = () => {
 
             {/* Header */}
             <div className="max-w-4xl mx-auto text-center mb-20 animate-fade-in">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/20 text-cyan-600 dark:text-cyan-400 text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/20 text-orange-600 dark:text-orange-400 text-sm font-medium mb-6">
                     <Database size={14} />
                     <span>Data Engineering & ML</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    The Ultimate <span className="text-cyan-600 dark:text-cyan-400">Data Instruction</span> Engine.
+                    The Ultimate <span className="text-orange-600 dark:text-orange-400">Data Instruction</span> Engine.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
                     A heavy-duty Python framework for extracting, comparing, and classifying massive datasets using parallel processing and generative AI.
@@ -48,14 +48,14 @@ const DataInstructionTool: React.FC = () => {
                         <FileSpreadsheet size={120} />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-3">
-                        <Merge className="text-cyan-500" /> Smart Comparison
+                        <Merge className="text-orange-500" /> Smart Comparison
                     </h3>
                     <p className="text-slate-600 dark:text-gray-400 mb-6 leading-relaxed">
                         Algorithmically compares multiple Excel files to identify discrepancies. Features a <strong>Fuzzy Logic</strong> engine that detects "80% matches" (e.g., "Apple Inc." vs "Apple Incorporated"), reducing manual review by 90%.
                     </p>
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-gray-400">
-                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cyan-500"></div>Row-by-row & Column-mapping analysis</li>
-                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cyan-500"></div>Levenshtein distance matching</li>
+                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>Row-by-row & Column-mapping analysis</li>
+                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>Levenshtein distance matching</li>
                     </ul>
                 </div>
 
@@ -64,14 +64,14 @@ const DataInstructionTool: React.FC = () => {
                         <BrainCircuit size={120} />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-3">
-                        <Bot className="text-purple-500" /> AI Classification
+                        <Bot className="text-orange-500" /> AI Classification
                     </h3>
                     <p className="text-slate-600 dark:text-gray-400 mb-6 leading-relaxed">
                         Automatically categorizes websites into product groups. The tool utilizes the <strong>TF-IDF algorithm</strong> to extract statistical keywords, then feeds them into <strong>Gemini</strong> for high-level semantic classification.
                     </p>
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-gray-400">
-                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>Keyword density analysis</li>
-                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>LLM-based sector determination</li>
+                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>Keyword density analysis</li>
+                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>LLM-based sector determination</li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +100,7 @@ const DataInstructionTool: React.FC = () => {
                             </div>
                             <div className="flex items-start gap-4">
                                 <div className="p-3 bg-white/5 rounded-xl border border-white/10">
-                                    <Globe className="text-blue-400" size={24} />
+                                    <Globe className="text-orange-400" size={24} />
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-1">Dynamic Rendering</h4>
@@ -118,21 +118,21 @@ const DataInstructionTool: React.FC = () => {
                             <div className="w-3 h-3 rounded-full bg-green-500"></div>
                         </div>
                         <pre>
-                            <span className="text-purple-400">async</span> <span className="text-blue-400">def</span> <span className="text-yellow-400">classify_site</span>(url):
+                            <span className="text-orange-400">async</span> <span className="text-orange-400">def</span> <span className="text-yellow-400">classify_site</span>(url):
                             <span className="text-gray-500"># 1. Scrape Content</span>
-                            content = <span className="text-purple-400">await</span> scraper.get_text(url)
+                            content = <span className="text-orange-400">await</span> scraper.get_text(url)
 
                             <span className="text-gray-500"># 2. Extract Keywords (TF-IDF)</span>
                             vectorizer = TfidfVectorizer()
                             keywords = vectorizer.fit_transform([content])
 
                             <span className="text-gray-500"># 3. AI Analysis</span>
-                            category = <span className="text-purple-400">await</span> gemini.predict(
+                            category = <span className="text-orange-400">await</span> gemini.predict(
                             model=<span className="text-green-400">"gemini-pro"</span>,
                             prompt=<span className="text-green-400">f"Classify based on: &#123;keywords&#125;"</span>
                             )
 
-                            <span className="text-purple-400">return</span> category
+                            <span className="text-orange-400">return</span> category
                         </pre>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ const DataInstructionTool: React.FC = () => {
 
             <div className="mt-24 text-center">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Need a custom data solution?</h2>
-                <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-cyan-600 text-white font-bold hover:bg-cyan-700 transition-all shadow-lg hover:shadow-cyan-500/25">
+                <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-neon text-white font-bold hover:bg-orange-700 transition-all shadow-lg hover:shadow-orange-500/25">
                     Discuss Your Data Needs
                 </a>
             </div>

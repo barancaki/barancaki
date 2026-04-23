@@ -110,9 +110,9 @@ const GoogleMapsScraper: React.FC = () => {
                 </div>
 
                 {/* Step 3 */}
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-blue-400 dark:hover:border-blue-500/30 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-neon dark:hover:border-neon/30 transition-all group">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
-                        <div className="p-4 rounded-2xl bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                        <div className="p-4 rounded-2xl bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
                             <Map size={32} />
                         </div>
                         <div>
@@ -128,9 +128,9 @@ const GoogleMapsScraper: React.FC = () => {
                 </div>
 
                 {/* Step 4 */}
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-cyan-400 dark:hover:border-cyan-500/30 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-orange-400 dark:hover:border-orange-500/30 transition-all group">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
-                        <div className="p-4 rounded-2xl bg-cyan-100 dark:bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform">
+                        <div className="p-4 rounded-2xl bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
                             <Globe size={32} />
                         </div>
                         <div>

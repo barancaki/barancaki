@@ -24,7 +24,7 @@ const WORKFLOW_NODES: WorkflowNode[] = [
         title: 'Lead Criteria',
         description: 'User defines target audience: Job Title, Industry, and Location via input form.',
         icon: <UserPlus size={24} />,
-        color: 'text-blue-400'
+        color: 'text-neon'
     },
     {
         id: 'search',
@@ -38,7 +38,7 @@ const WORKFLOW_NODES: WorkflowNode[] = [
         title: 'Profile Extraction',
         description: 'Deep scrapes LinkedIn profiles to get full work history and activity.',
         icon: <Linkedin size={24} />,
-        color: 'text-blue-600'
+        color: 'text-orange-500'
     },
     {
         id: 'enrich',
@@ -63,13 +63,13 @@ const WorkflowVisualizer: React.FC = () => {
 
     return (
         <div className="md:col-span-12 glass-card rounded-3xl p-8 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-neon to-green-400"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon via-orange-400 to-green-400"></div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
                 <div>
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded-lg bg-violet-100 dark:bg-neon/10">
-                            <Cpu className="text-violet-600 dark:text-neon" size={24} />
+                        <div className="p-2 rounded-lg bg-orange-100 dark:bg-neon/10">
+                            <Cpu className="text-orange-600 dark:text-neon" size={24} />
                         </div>
                         <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white">LinkedIn Lead Gen Engine</h3>
                     </div>
@@ -90,10 +90,10 @@ const WorkflowVisualizer: React.FC = () => {
             {/* Workflow Graphic Area */}
             <div className="relative py-16 px-4 bg-slate-50 dark:bg-void/30 rounded-2xl border border-slate-200 dark:border-white/5 min-h-[300px] flex items-center justify-center bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] [background-size:16px_16px]">
                 {/* Horizontal Connection Line (Desktop) */}
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-violet-300 to-green-200 dark:from-blue-900 dark:via-neon/50 dark:to-green-900 -translate-y-1/2 hidden md:block z-0"></div>
+                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-orange-200 via-orange-300 to-green-200 dark:from-orange-900/40 dark:via-neon/50 dark:to-green-900 -translate-y-1/2 hidden md:block z-0"></div>
 
                 {/* Vertical Connection Line (Mobile) */}
-                <div className="absolute top-0 left-1/2 h-full w-0.5 bg-gradient-to-b from-blue-200 via-violet-300 to-green-200 dark:from-blue-900 dark:via-neon/50 dark:to-green-900 -translate-x-1/2 md:hidden z-0"></div>
+                <div className="absolute top-0 left-1/2 h-full w-0.5 bg-gradient-to-b from-orange-200 via-orange-300 to-green-200 dark:from-orange-900/40 dark:via-neon/50 dark:to-green-900 -translate-x-1/2 md:hidden z-0"></div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8 relative z-10 w-full px-4 md:px-8">
                     {WORKFLOW_NODES.map((node, index) => (
@@ -106,8 +106,8 @@ const WorkflowVisualizer: React.FC = () => {
                                 <div
                                     className={`w-20 h-20 rounded-2xl bg-white dark:bg-void border-2 flex items-center justify-center shadow-xl transition-all duration-500 z-10 relative
                                     ${activeNode === node.id || (!activeNode && index === 0)
-                                            ? `border-${node.color.split('-')[1]}-500 shadow-[0_0_30px_-5px_rgba(124,58,237,0.3)] dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.4)]`
-                                            : 'border-slate-200 dark:border-white/10 group-hover/node:border-violet-300 dark:group-hover/node:border-white/30'
+                                            ? `border-${node.color.split('-')[1]}-500 shadow-[0_0_30px_-5px_rgba(232,98,42,0.3)] dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.4)]`
+                                            : 'border-slate-200 dark:border-white/10 group-hover/node:border-orange-300 dark:group-hover/node:border-white/30'
                                         }`}
                                 >
                                     <span className={`${node.color} transition-colors duration-300 transform scale-125`}>

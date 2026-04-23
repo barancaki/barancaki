@@ -149,7 +149,7 @@ const RayaAiVisualizer: React.FC = () => {
                                 <div className="mt-4">
                                     <p className="text-xs text-slate-500 uppercase font-bold mb-2">Recommendation</p>
                                     <div className="flex items-center gap-2 p-2 bg-white/5 rounded-lg border border-white/5">
-                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[10px] text-blue-600 font-bold">Hy</div>
+                                        <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-[10px] text-orange-600 font-bold">Hy</div>
                                         <div className="text-xs text-slate-300">Hyaluronic Acid Serum</div>
                                     </div>
                                 </div>

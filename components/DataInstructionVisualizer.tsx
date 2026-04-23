@@ -42,14 +42,14 @@ const DataInstructionVisualizer: React.FC = () => {
     return (
         <div className="md:col-span-12 glass-card rounded-3xl p-8 relative overflow-hidden group min-h-[450px] flex flex-col">
             {/* Background Gradient */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-neon to-orange-600"></div>
 
             {/* Header */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4 relative z-10">
                 <div>
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded-lg bg-cyan-100 dark:bg-cyan-500/10">
-                            <Database className="text-cyan-600 dark:text-cyan-400" size={24} />
+                        <div className="p-2 rounded-lg bg-orange-100 dark:bg-orange-500/10">
+                            <Database className="text-orange-600 dark:text-orange-400" size={24} />
                         </div>
                         <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white">Data Instruction Tool</h3>
                     </div>
@@ -64,7 +64,7 @@ const DataInstructionVisualizer: React.FC = () => {
                     </div>
                     <a
                         href="/data-instruction-tool"
-                        className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all text-sm font-medium text-slate-700 dark:text-white group/btn"
+                        className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:bg-neon hover:border-neon hover:text-white transition-all text-sm font-medium text-slate-700 dark:text-white group/btn"
                     >
                         Learn How It Works
                         <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -88,7 +88,7 @@ const DataInstructionVisualizer: React.FC = () => {
                                 <span>Master_Product_List.xlsx</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300 p-2 rounded bg-white dark:bg-black/20 border border-slate-100 dark:border-white/5">
-                                <Globe size={14} className="text-blue-500" />
+                                <Globe size={14} className="text-orange-500" />
                                 <span>competitor-site.com</span>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ const DataInstructionVisualizer: React.FC = () => {
                         disabled={processState !== 'idle'}
                         className={`mt-auto py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2
                             ${processState === 'idle'
-                                ? 'bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg shadow-cyan-500/20'
+                                ? 'bg-neon hover:bg-orange-700 text-white shadow-lg shadow-orange-500/20'
                                 : 'bg-slate-200 dark:bg-white/10 text-slate-400 cursor-not-allowed'
                             }`}
                     >
@@ -134,7 +134,7 @@ const DataInstructionVisualizer: React.FC = () => {
 
                     {/* Visual Nodes Overlay (Abstract) */}
                     <div className="absolute right-4 bottom-4 flex gap-4 pointer-events-none opacity-20">
-                        <BrainCircuit size={64} className="text-purple-500 animate-pulse" />
+                        <BrainCircuit size={64} className="text-orange-500 animate-pulse" />
                     </div>
                 </div>
             </div>

@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
 
           {/* Logo */}
           {/* Logo */}
-          <a href="/" className="font-display font-bold text-xl tracking-tighter hover:text-cyan-400 dark:text-white text-slate-900 transition-colors">
+          <a href="/" className="font-display font-bold text-xl tracking-tighter hover:text-orange-400 dark:text-white text-slate-900 transition-colors">
             BARAN<span className="text-neon">.AI</span>
           </a>
 
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={`/${link.href}`}
-              className="text-lg font-medium text-gray-300 hover:text-cyan-400"
+              className="text-lg font-medium text-gray-300 hover:text-orange-400"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}

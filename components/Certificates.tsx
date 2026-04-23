@@ -62,7 +62,7 @@ const Certificates: React.FC = () => {
                                         <span className="font-bold text-xl text-slate-700 dark:text-white">G</span>
                                     )}
                                     {cert.logo === 'ibm' && (
-                                        <span className="font-mono font-bold text-xl text-blue-600 dark:text-blue-400">IBM</span>
+                                        <span className="font-mono font-bold text-xl text-slate-500 dark:text-white/50">IBM</span>
                                     )}
                                     {cert.logo === 'btk' && (
                                         <span className="font-bold text-lg text-red-600 dark:text-red-400">BTK</span>
@@ -84,30 +84,24 @@ const Certificates: React.FC = () => {
                 <div className="w-full overflow-hidden border-t border-slate-200 dark:border-white/5 pt-12">
                     <p className="text-center text-sm font-medium text-slate-400 dark:text-gray-500 mb-8 uppercase tracking-widest">Certified By</p>
 
-                    <div className="relative flex overflow-x-hidden group">
-                        <div className="animate-marquee flex gap-16 items-center whitespace-nowrap min-w-full px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                            {/* Logo Group 1 */}
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
-                            <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
-                            <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
-                        </div>
-
-                        <div className="animate-marquee flex gap-16 items-center whitespace-nowrap min-w-full px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                            {/* Logo Group 2 (Duplicate for seamless loop) */}
-                            {/* Note: In standard marquee with 2 flex items, we rely on them being side-by-side. 
-                                 However, Tailwind's animate-marquee usually translates -100%. 
-                                 If we use two identical divs in a flex row, seeing the second one chase the first one is standard. 
-                             */}
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
-                            <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
-                            <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
-                            <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
-                        </div>
+                    <div className="relative flex overflow-hidden">
+                        {[0, 1].map((i) => (
+                            <div
+                                key={i}
+                                aria-hidden={i === 1}
+                                className="animate-marquee shrink-0 flex gap-16 items-center whitespace-nowrap opacity-50 grayscale hover:grayscale-0 transition-all duration-500 pr-16"
+                            >
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
+                                <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
+                                <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">Google</span>
+                                <span className="text-3xl font-mono font-bold text-slate-400 dark:text-white/60">IBM</span>
+                                <span className="text-3xl font-bold text-slate-400 dark:text-white/60">BTK <span className="font-light">ACADEMY</span></span>
+                            </div>
+                        ))}
                     </div>
                 </div>
 

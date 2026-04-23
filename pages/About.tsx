@@ -21,17 +21,12 @@ const About: React.FC = () => {
 
     return (
         <div className="pt-24 pb-20 container mx-auto px-6 relative overflow-hidden">
-
-            {/* Abstract Background Elements */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/20 rounded-full blur-[120px] -z-10 opacity-50 pointer-events-none mix-blend-screen"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 opacity-30 pointer-events-none mix-blend-screen"></div>
-
             {/* Hero Section */}
             <div className="max-w-4xl mx-auto mb-24 animate-fade-in relative">
 
 
                 <h1 className="font-display text-5xl md:text-7xl font-bold mb-8 leading-tight text-slate-900 dark:text-white">
-                    Building the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-cyan-400">Digital Workforce</span> of Tomorrow.
+                    Building the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-orange-400">Digital Workforce</span> of Tomorrow.
                 </h1>
 
                 <div className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed space-y-6">
@@ -55,18 +50,18 @@ const About: React.FC = () => {
                         In the age of AI, speed isn't just a feature; it's survival. My workflows reduce 40-hour processes to 4-minute executions.
                     </p>
                 </div>
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-cyan-400/50 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-orange-400/50 transition-all group">
                     <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <BrainCircuit size={24} className="text-cyan-400" />
+                        <BrainCircuit size={24} className="text-orange-400" />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Intelligent Design</h3>
                     <p className="text-slate-600 dark:text-gray-400">
                         Automation without intelligence is brittle. I integrate LLMs (Gemini, OpenAI) to create systems that can "think" and adapt to messy data.
                     </p>
                 </div>
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-purple-400/50 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-orange-400/50 transition-all group">
                     <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <LayoutTemplate size={24} className="text-purple-400" />
+                        <LayoutTemplate size={24} className="text-orange-400" />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Seamless UX</h3>
                     <p className="text-slate-600 dark:text-gray-400">
@@ -114,7 +109,7 @@ const About: React.FC = () => {
                     <div className="relative pl-8 md:pl-12 group opacity-70 hover:opacity-100 transition-opacity">
                         <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-slate-300 dark:border-slate-600 group-hover:border-white transition-all" />
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-400 transition-colors">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-orange-400 transition-colors">
                                 Computer Engineering
                             </h3>
                             <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-xs font-mono text-slate-500 dark:text-gray-400 whitespace-nowrap mt-2 sm:mt-0">
@@ -133,7 +128,7 @@ const About: React.FC = () => {
 
             {/* CTA */}
             <div className="glass-card rounded-3xl p-12 text-center relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon to-cyan-400"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon to-orange-400"></div>
 
                 <h2 className="font-display text-4xl font-bold mb-6 text-slate-900 dark:text-white">Ready to automate the boring stuff?</h2>
                 <p className="text-xl text-slate-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">

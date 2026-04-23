@@ -29,12 +29,12 @@ const LinkedinLeadGen: React.FC = () => {
 
             {/* Header */}
             <div className="max-w-4xl mx-auto text-center mb-20 animate-fade-in">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/20 text-orange-600 dark:text-orange-400 text-sm font-medium mb-6">
                     <Linkedin size={14} />
                     <span>Automated Sales Workflow</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">24/7 Digital SDR</span> you always wanted.
+                    The <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-orange-400">24/7 Digital SDR</span> you always wanted.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
                     An autonomous agentic workflow that hunts, verifies, and organizes high-quality leads while you sleep. No manual data entry. No "burnt" accounts.
@@ -44,7 +44,7 @@ const LinkedinLeadGen: React.FC = () => {
             {/* Stats / Outcomes */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-5xl mx-auto">
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
-                    <div className="w-12 h-12 rounded-full bg-violet-100 dark:bg-neon/10 flex items-center justify-center mx-auto mb-4 text-violet-600 dark:text-neon">
+                    <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-neon/10 flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-neon">
                         <Zap size={24} />
                     </div>
                     <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">10x</h3>
@@ -58,7 +58,7 @@ const LinkedinLeadGen: React.FC = () => {
                     <p className="text-slate-600 dark:text-gray-400">Verified Email Delivery</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400">
+                    <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
                         <Clock size={24} />
                     </div>
                     <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">100%</h3>
@@ -71,9 +71,9 @@ const LinkedinLeadGen: React.FC = () => {
                 <h2 className="font-display text-3xl font-bold mb-12 text-center text-slate-900 dark:text-white">How It Works</h2>
 
                 {/* Step 1 */}
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-blue-400 dark:hover:border-blue-500/30 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-neon dark:hover:border-neon/30 transition-all group">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
-                        <div className="p-4 rounded-2xl bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                        <div className="p-4 rounded-2xl bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
                             <UserPlus size={32} />
                         </div>
                         <div>
@@ -84,7 +84,7 @@ const LinkedinLeadGen: React.FC = () => {
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                 {['Target Industry (e.g., SaaS, Logistics)', 'Decision Maker Titles (CEO, CTO)', 'Geographic Location', 'Company Size Range'].map(item => (
                                     <li key={item} className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-300">
-                                        <CheckCircle2 size={16} className="text-blue-500" />
+                                        <CheckCircle2 size={16} className="text-neon" />
                                         {item}
                                     </li>
                                 ))}
@@ -96,7 +96,7 @@ const LinkedinLeadGen: React.FC = () => {
                 {/* Step 2 */}
                 <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-neon dark:hover:border-neon/30 transition-all group">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
-                        <div className="p-4 rounded-2xl bg-violet-100 dark:bg-neon/10 text-violet-600 dark:text-neon group-hover:scale-110 transition-transform">
+                        <div className="p-4 rounded-2xl bg-orange-100 dark:bg-neon/10 text-orange-600 dark:text-neon group-hover:scale-110 transition-transform">
                             <Search size={32} />
                         </div>
                         <div>
@@ -109,9 +109,9 @@ const LinkedinLeadGen: React.FC = () => {
                 </div>
 
                 {/* Step 3 */}
-                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-blue-600 dark:hover:border-blue-600/30 transition-all group">
+                <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-neon dark:hover:border-neon/30 transition-all group">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
-                        <div className="p-4 rounded-2xl bg-blue-100 dark:bg-blue-600/10 text-blue-600 dark:text-blue-600 group-hover:scale-110 transition-transform">
+                        <div className="p-4 rounded-2xl bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
                             <Linkedin size={32} />
                         </div>
                         <div>
@@ -160,7 +160,7 @@ const LinkedinLeadGen: React.FC = () => {
 
             <div className="mt-24 text-center">
                 <p className="text-slate-500 dark:text-gray-500 mb-6">Ready to automate your pipeline?</p>
-                <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-neon text-white font-bold hover:bg-violet-600 transition-all shadow-[0_4px_20px_-5px_rgba(124,58,237,0.4)] dark:shadow-[0_0_30px_-10px_rgba(124,58,237,0.5)]">
+                <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-neon text-white font-bold hover:bg-orange-700 transition-all shadow-[0_4px_20px_-5px_rgba(232,98,42,0.4)] dark:shadow-[0_0_30px_-10px_rgba(232,98,42,0.5)]">
                     Get This Workflow
                 </a>
             </div>

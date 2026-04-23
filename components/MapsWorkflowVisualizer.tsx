@@ -44,7 +44,7 @@ const WORKFLOW_NODES: WorkflowNode[] = [
         title: 'Web Check',
         description: 'Visits the company website to find hidden emails and social links.',
         icon: <Globe size={24} />,
-        color: 'text-cyan-400'
+        color: 'text-orange-400'
     },
     {
         id: 'export',

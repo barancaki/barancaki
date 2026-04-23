@@ -15,7 +15,7 @@ const Timeline: React.FC = () => {
           {EXPERIENCE.map((exp) => (
             <div key={exp.id} className="relative pl-8 md:pl-12 group">
               {/* Dot */}
-              <div className={`absolute -left-[9px] md:-left-[11px] top-0 w-5 h-5 rounded-full border-4 border-void ${exp.current ? 'bg-neon shadow-[0_0_15px_rgba(124,58,237,0.5)]' : 'bg-gray-700'}`}></div>
+              <div className={`absolute -left-[9px] md:-left-[11px] top-0 w-5 h-5 rounded-full border-4 border-void ${exp.current ? 'bg-neon shadow-[0_0_15px_rgba(232,98,42,0.5)]' : 'bg-gray-700'}`}></div>
               
               <div className="glass-card p-6 rounded-2xl transition-all hover:bg-white/5">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">

@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           )}
         </div>
         
-        <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 leading-tight group-hover:text-cyan-200 transition-colors">
+        <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 leading-tight group-hover:text-orange-200 transition-colors">
           {project.title}
         </h3>
         

@@ -51,7 +51,7 @@ const RayaAI: React.FC = () => {
                     <p className="text-sm text-slate-600 dark:text-gray-400">Analyzes skin texture, hydration, and acne using high-res photo processing.</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl border border-pink-100 dark:border-white/5 hover:border-pink-300 dark:hover:border-pink-500/30 transition-all">
-                    <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400">
+                    <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400">
                         <BrainCircuit size={24} />
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">Gemini & OpenAI</h3>
@@ -65,7 +65,7 @@ const RayaAI: React.FC = () => {
                     <p className="text-sm text-slate-600 dark:text-gray-400">Compare your shelf products against your skin data to find the perfect match.</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl border border-pink-100 dark:border-white/5 hover:border-pink-300 dark:hover:border-pink-500/30 transition-all">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center mb-4 text-blue-600 dark:text-blue-400">
+                    <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400">
                         <Activity size={24} />
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">Progress Tracking</h3>
@@ -98,7 +98,7 @@ const RayaAI: React.FC = () => {
 
                 {/* Mockup or Graphic */}
                 <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                     <div className="glass-card p-8 rounded-3xl border border-pink-200 dark:border-white/10 relative z-10 transform hover:rotate-1 transition-transform duration-500">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -108,9 +108,9 @@ const RayaAI: React.FC = () => {
                         <div className="space-y-4 font-mono text-sm">
                             <div className="text-pink-400">const analyzeSkin = async (image) =&gt; {'{'}</div>
                             <div className="pl-4 text-slate-500 dark:text-gray-400">// Extract features using Vision Model</div>
-                            <div className="pl-4 text-purple-400">const features = await Gemini.vision(image);</div>
+                            <div className="pl-4 text-orange-400">const features = await Gemini.vision(image);</div>
                             <div className="pl-4 text-slate-500 dark:text-gray-400">// Generate personalized plan</div>
-                            <div className="pl-4 text-blue-400">const plan = await OpenAI.chat(features);</div>
+                            <div className="pl-4 text-orange-400">const plan = await OpenAI.chat(features);</div>
                             <div className="pl-4 text-slate-900 dark:text-white">return plan;</div>
                             <div className="text-pink-400">{'}'}</div>
                         </div>
