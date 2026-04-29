@@ -25,8 +25,8 @@ export const PROJECTS: Project[] = [];
 export const EXPERIENCE: Experience[] = [
   {
     id: '1',
-    role: 'IT & Digitalization',
-    company: 'Hannover Fairs Turkey',
+    role: 'IT & Digitalization, AI Engineer, Automation Engineer',
+    company: 'Deutsche Messe AG - Hannover Fairs Turkey',
     period: 'Current',
     description: 'Focusing on automating enterprise workflows using Python and AI agents.',
     current: true

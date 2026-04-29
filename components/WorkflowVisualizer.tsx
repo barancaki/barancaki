@@ -114,7 +114,7 @@ const WorkflowVisualizer: React.FC = () => {
                                         {node.icon}
                                     </span>
                                 </div>
-                                <span className={`text-base font-medium absolute top-24 md:-bottom-10 whitespace-nowrap md:whitespace-normal text-center bg-slate-50/90 dark:bg-void/90 md:bg-transparent px-2 md:px-0 rounded py-1 md:py-0 ${activeNode === node.id || (!activeNode && index === 0) ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-gray-500'}`}>
+                                <span className={`text-base font-medium absolute top-24 md:-bottom-10 whitespace-nowrap md:whitespace-normal text-center px-2 md:px-0 py-1 md:py-0 ${activeNode === node.id || (!activeNode && index === 0) ? 'text-slate-900 dark:text-white' : 'text-slate-500 dark:text-gray-500'}`}>
                                     {node.title}
                                 </span>
 

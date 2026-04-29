@@ -113,7 +113,7 @@ const About: React.FC = () => {
                                 Computer Engineering
                             </h3>
                             <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-xs font-mono text-slate-500 dark:text-gray-400 whitespace-nowrap mt-2 sm:mt-0">
-                                2020 - 2024
+                                2022 - 2026
                             </span>
                         </div>
                         <div className="text-lg font-medium text-slate-700 dark:text-gray-300 mb-2">

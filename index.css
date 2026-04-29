@@ -75,6 +75,13 @@ body {
   min-width: 320px;
 }
 
+/* Override default blue focus ring with orange across the entire site */
+*:focus-visible {
+  outline: 2px solid #f97316 !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2) !important;
+}
+
 .portfolio-shader-background {
   z-index: 0;
   background: #000;

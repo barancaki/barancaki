@@ -66,8 +66,36 @@ const BentoGrid: React.FC = () => {
               <div
                 key={project.id}
                 id={`project-${project.id}`}
-                className={`transition-all duration-500 ${activeProject === project.id ? '' : ''}`}
+                className="flex gap-4 lg:gap-6 items-start transition-all duration-500"
               >
+                {/* Dot Indicator */}
+                <div className="flex flex-col items-center pt-6 shrink-0">
+                  <button
+                    onClick={() => toggleProject(project.id)}
+                    className="group relative flex items-center justify-center"
+                    title={project.title}
+                  >
+                    <div className={`w-3 h-3 rounded-full transition-all duration-500
+                      ${activeProject === project.id && project.id === 'linkedin' ? 'bg-neon shadow-[0_0_10px_2px] shadow-neon/50 scale-125' : ''}
+                      ${activeProject === project.id && project.id === 'maps' ? 'bg-orange-500 shadow-[0_0_10px_2px] shadow-orange-500/50 scale-125' : ''}
+                      ${activeProject === project.id && project.id === 'raya' ? 'bg-pink-500 shadow-[0_0_10px_2px] shadow-pink-500/50 scale-125' : ''}
+                      ${activeProject === project.id && project.id === 'data-tool' ? 'bg-cyan-500 shadow-[0_0_10px_2px] shadow-cyan-500/50 scale-125' : ''}
+                      ${activeProject !== project.id ? 'bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-500' : ''}
+                    `} />
+                  </button>
+                  {index < MAJOR_PROJECTS.length - 1 && (
+                    <div className={`w-0.5 mt-2 transition-all duration-500 ${activeProject === project.id ? 'flex-1 min-h-[2rem]' : 'h-8'} ${
+                      activeProject === project.id && project.id === 'linkedin' ? 'bg-neon/30' :
+                      activeProject === project.id && project.id === 'maps' ? 'bg-orange-500/30' :
+                      activeProject === project.id && project.id === 'raya' ? 'bg-pink-500/30' :
+                      activeProject === project.id && project.id === 'data-tool' ? 'bg-cyan-500/30' :
+                      'bg-slate-200 dark:bg-white/10'
+                    }`} />
+                  )}
+                </div>
+
+                {/* Card */}
+                <div className="flex-1">
                 {/* Header / Trigger Card */}
                 <button
                   onClick={() => toggleProject(project.id)}
@@ -128,53 +156,17 @@ const BentoGrid: React.FC = () => {
                     )}
                   </div>
                 </div>
+                </div>
               </div>
             ))}
 
             <div className="pt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Minor Projects Loop (if any in constants) */}
               {PROJECTS.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
 
             <Skills />
-          </div>
-
-          {/* Right-Side Sticky Scroll Indicator */}
-          <div className="hidden lg:block w-24 relative border-l border-slate-200 dark:border-white/5 ml-8">
-            <div className="sticky top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 py-8 -ml-[1px]">
-              {MAJOR_PROJECTS.map((project) => (
-                <button
-                  key={project.id}
-                  onClick={() => {
-                    setActiveProject(project.id);
-                    const el = document.getElementById(`project-${project.id}`);
-                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  }}
-                  className="group relative flex items-center"
-                >
-                  {/* Tooltip Label */}
-                  <span className={`absolute right-full mr-4 px-2 py-1 rounded bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold whitespace-nowrap opacity-0 transition-all duration-300 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 ${activeProject === project.id ? 'opacity-100 translate-x-0' : ''}`}>
-                    {project.title}
-                  </span>
-
-                  {/* Dot Indicator */}
-                  <div className={`w-3 h-3 rounded-full transition-all duration-500
-                                        ${activeProject === project.id
-                      ? `${project.color.replace('bg-', 'bg-')} scale-125 shadow-[0_0_15px_currentColor]` // Simple logic, might need specific colors
-                      : 'bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-500'
-                    }
-                                        ${activeProject === project.id && project.id === 'linkedin' ? 'bg-neon shadow-neon/50' : ''}
-                                        ${activeProject === project.id && project.id === 'maps' ? 'bg-orange-500 shadow-orange-500/50' : ''}
-                                        ${activeProject === project.id && project.id === 'raya' ? 'bg-pink-500 shadow-pink-500/50' : ''}
-                                        ${activeProject === project.id && project.id === 'data-tool' ? 'bg-cyan-500 shadow-cyan-500/50' : ''}
-                                     `}></div>
-
-                  {/* Connecting Line (Optional, or handled by border-l parent) */}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
