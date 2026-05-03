@@ -102,6 +102,8 @@ const WorkflowVisualizer: React.FC = () => {
                             <button
                                 onClick={() => setActiveNode(node.id)}
                                 className={`flex flex-col items-center gap-4 group/node transition-all duration-300 relative ${activeNode === node.id || (!activeNode && index === 0) ? 'scale-110' : 'hover:scale-105 opacity-60 hover:opacity-100'}`}
+                                aria-label={`Show ${node.title} step details`}
+                                aria-pressed={activeNode === node.id || (!activeNode && index === 0)}
                             >
                                 <div
                                     className={`w-20 h-20 rounded-2xl bg-white dark:bg-void border-2 flex items-center justify-center shadow-xl transition-all duration-500 z-10 relative

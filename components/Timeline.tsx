@@ -4,11 +4,11 @@ import { Briefcase } from 'lucide-react';
 
 const Timeline: React.FC = () => {
   return (
-    <section id="experience" className="py-20 relative">
+    <section id="experience" className="py-20 relative" aria-labelledby="experience-title">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-12 text-center md:text-left">
-            <h2 className="font-display text-4xl font-bold mb-4">Experience</h2>
-            <p className="text-gray-400">My journey in engineering and automation.</p>
+            <h2 id="experience-title" className="font-display text-4xl font-bold mb-4">Experience</h2>
+            <p className="text-gray-400">Current and past work across AI engineering, automation, digitalization, and project control.</p>
         </div>
 
         <div className="relative border-l border-white/10 ml-4 md:ml-6 space-y-12">

@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { EXPERIENCE } from '../constants';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { personJsonLd } from '../lib/seo';
 
 const About: React.FC = () => {
 
@@ -20,7 +22,14 @@ const About: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-6 relative overflow-hidden">
+        <main className="pt-24 pb-20 container mx-auto px-6 relative overflow-hidden">
+            <SEO
+                title="About Baran Çakı | AI Automation Engineer"
+                description="Learn about Baran Çakı's work in AI engineering, automation engineering, n8n workflows, Python automation, and digitalization."
+                path="/about"
+                type="profile"
+                jsonLd={personJsonLd}
+            />
             {/* Hero Section */}
             <div className="max-w-4xl mx-auto mb-24 animate-fade-in relative">
 
@@ -31,15 +40,16 @@ const About: React.FC = () => {
 
                 <div className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed space-y-6">
                     <p>
-                        I'm <strong className="text-slate-900 dark:text-white">Baran Çakı</strong>, an Automation Architect and AI Engineer who believes that human potential shouldn't be wasted on repetitive tasks.
+                        I'm <strong className="text-slate-900 dark:text-white">Baran Çakı</strong>, an Automation Architect and AI Engineer focused on reducing repetitive operational work with reliable digital workflows.
                     </p>
                     <p>
-                        My philosophy is simple: <strong>"If it can be defined, it can be automated."</strong> I don't just write code; I build "Digital Workers"—intelligent, autonomous systems that handle complex workflows, from lead generation to data analysis, allowing businesses to scale without linear headcount growth.
+                        My work centers on "Digital Workers": systems that combine workflow automation, Python, AI agents, and data processing to handle defined business processes such as lead generation, scraping, enrichment, and analysis.
                     </p>
                 </div>
             </div>
 
             {/* Philosophy Grid */}
+            <h2 className="sr-only">Automation Philosophy</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
                 <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-neon/50 transition-all group">
                     <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -47,7 +57,7 @@ const About: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Speed is Currency</h3>
                     <p className="text-slate-600 dark:text-gray-400">
-                        In the age of AI, speed isn't just a feature; it's survival. My workflows reduce 40-hour processes to 4-minute executions.
+                        Automation should make defined work faster, repeatable, and easier to operate. The goal is to move manual processes into dependable workflows.
                     </p>
                 </div>
                 <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-orange-400/50 transition-all group">
@@ -56,16 +66,16 @@ const About: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Intelligent Design</h3>
                     <p className="text-slate-600 dark:text-gray-400">
-                        Automation without intelligence is brittle. I integrate LLMs (Gemini, OpenAI) to create systems that can "think" and adapt to messy data.
+                        I integrate LLMs such as Gemini and OpenAI where rule-based automation needs stronger reasoning over messy data.
                     </p>
                 </div>
                 <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-orange-400/50 transition-all group">
                     <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <LayoutTemplate size={24} className="text-orange-400" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Seamless UX</h3>
+                    <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Usable Interfaces</h3>
                     <p className="text-slate-600 dark:text-gray-400">
-                        Powerful backend logic needs a beautiful frontend. My "Vibe Coding" approach ensures that even internal tools feel like premium products.
+                        Automation tools need clear interfaces. I pair backend workflows with usable product surfaces for internal tools and AI-powered applications.
                     </p>
                 </div>
             </div>
@@ -135,12 +145,12 @@ const About: React.FC = () => {
                     Let's discuss how we can deploy digital workers to your team today.
                 </p>
 
-                <a href="mailto:contact@barancaki.com" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform">
-                    Let's Talk <ArrowRight size={20} />
+                <a href="mailto:baran.caki@hotmail.com" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform">
+                    Start a Conversation <ArrowRight size={20} />
                 </a>
             </div>
 
-        </div>
+        </main>
     );
 };
 

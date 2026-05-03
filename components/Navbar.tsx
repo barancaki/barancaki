@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
         <div className={`glass-card rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'bg-void/80 dark:bg-void/80' : 'bg-transparent border-transparent shadow-none'}`}>
 
           {/* Logo */}
-          <a href="/" className="font-display font-bold text-xl tracking-tighter hover:text-orange-400 dark:text-white text-slate-900 transition-colors">
+          <a href="/" className="font-display font-bold text-xl tracking-tighter hover:text-orange-400 dark:text-white text-slate-900 transition-colors" aria-label="Baran Çakı portfolio home">
             BARAN<span className="text-neon">.AI</span>
           </a>
 
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-300 hover:text-neon dark:hover:text-cyan transition-all"
-              aria-label="Toggle Theme"
+              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -83,12 +83,15 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-300"
+              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
               className="text-slate-900 dark:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </button>

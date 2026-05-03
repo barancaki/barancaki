@@ -12,6 +12,8 @@ import {
     Clock
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { creativeWorkJsonLd } from '../lib/seo';
 
 const LinkedinLeadGen: React.FC = () => {
 
@@ -20,7 +22,19 @@ const LinkedinLeadGen: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-6">
+        <main className="pt-24 pb-20 container mx-auto px-6">
+            <SEO
+                title="LinkedIn Lead Gen Engine | n8n Automation Case Study"
+                description="Case study for an n8n lead generation workflow that searches profiles, extracts public data, enriches contact records, validates email patterns, and syncs leads to a CRM or Google Sheet."
+                path="/linkedin-lead-gen"
+                type="article"
+                jsonLd={creativeWorkJsonLd(
+                    'LinkedIn Lead Gen Engine',
+                    'An n8n automation workflow for lead search, profile extraction, enrichment, validation, and CRM or Google Sheets sync.',
+                    ['n8n', 'Google Custom Search Engines', 'LinkedIn', 'CRM', 'Google Sheets', 'lead generation'],
+                    '/linkedin-lead-gen',
+                )}
+            />
             {/* Back Button */}
             <Link to="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white mb-12 transition-colors">
                 <ArrowLeft size={20} />
@@ -34,15 +48,16 @@ const LinkedinLeadGen: React.FC = () => {
                     <span>Automated Sales Workflow</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    The <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-orange-400">24/7 Digital SDR</span> you always wanted.
+                    A <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-orange-400">lead generation workflow</span> for structured outreach data.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                    An autonomous agentic workflow that hunts, verifies, and organizes high-quality leads while you sleep. No manual data entry. No "burnt" accounts.
+                    An n8n workflow that searches for relevant profiles, extracts public profile details, enriches contact records, and organizes leads for CRM or Google Sheets follow-up.
                 </p>
             </div>
 
             {/* Stats / Outcomes */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-5xl mx-auto">
+                <h2 className="sr-only">LinkedIn Lead Gen Engine Outcomes</h2>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
                     <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-neon/10 flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-neon">
                         <Zap size={24} />
@@ -62,9 +77,24 @@ const LinkedinLeadGen: React.FC = () => {
                         <Clock size={24} />
                     </div>
                     <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">100%</h3>
-                    <p className="text-slate-600 dark:text-gray-400">Automated & Unattended</p>
+                    <p className="text-slate-600 dark:text-gray-400">Automated Workflow Execution</p>
                 </div>
             </div>
+
+            <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-24" aria-labelledby="linkedin-overview">
+                <h2 id="linkedin-overview" className="sr-only">Project Overview</h2>
+                {[
+                    ['Context', 'Manual lead research creates repetitive search, extraction, validation, and formatting work before outreach can begin.'],
+                    ['What was built', 'An n8n workflow that turns defined audience criteria into structured lead records.'],
+                    ['Technologies used', 'n8n, Google Custom Search Engines, LinkedIn profile extraction, SMTP validation, CRM, and Google Sheets.'],
+                    ['Purpose', 'Prepare cleaner lead data for sales outreach with less manual data entry.'],
+                ].map(([title, body]) => (
+                    <article key={title} className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+                        <p className="text-slate-600 dark:text-gray-400 leading-relaxed">{body}</p>
+                    </article>
+                ))}
+            </section>
 
             {/* Deep Dive Steps */}
             <div className="max-w-4xl mx-auto space-y-8">
@@ -102,7 +132,7 @@ const LinkedinLeadGen: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">2. Search Agent Execution</h3>
                             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-4">
-                                The workflow leverages <strong>Google Custom Search Engines (CSE)</strong> and advanced boolean logic to bypass LinkedIn's search limitations. It autonomously pages through thousands of results, identifying potential profiles that match the exact criteria without triggering anti-bot protections.
+                                The workflow uses <strong>Google Custom Search Engines (CSE)</strong> and advanced boolean logic to find public LinkedIn profile results that match the selected criteria.
                             </p>
                         </div>
                     </div>
@@ -135,7 +165,7 @@ const LinkedinLeadGen: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">4. Multi-Layer Enrichment & Validation</h3>
                             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-4">
-                                This is the "secret sauce". The system uses permutation algorithms and SMTP pinging to verify corporate emails (e.g., <em>firstname.lastname@company.com</em>). It also cross-references data to find valid phone numbers, ensuring high deliverability for your outreach campaigns.
+                                The system uses permutation algorithms and SMTP pinging to validate corporate email patterns such as <em>firstname.lastname@company.com</em>. It also cross-references available data to format outreach records.
                             </p>
                         </div>
                     </div>
@@ -161,11 +191,11 @@ const LinkedinLeadGen: React.FC = () => {
             <div className="mt-24 text-center">
                 <p className="text-slate-500 dark:text-gray-500 mb-6">Ready to automate your pipeline?</p>
                 <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-neon text-white font-bold hover:bg-orange-700 transition-all shadow-[0_4px_20px_-5px_rgba(232,98,42,0.4)] dark:shadow-[0_0_30px_-10px_rgba(232,98,42,0.5)]">
-                    Get This Workflow
+                    Discuss This Workflow
                 </a>
             </div>
 
-        </div>
+        </main>
     );
 };
 

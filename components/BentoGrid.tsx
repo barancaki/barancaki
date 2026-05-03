@@ -16,28 +16,28 @@ const BentoGrid: React.FC = () => {
     {
       id: 'linkedin',
       title: 'LinkedIn Lead Gen Engine',
-      description: 'Autonomous n8n workflow for scraping and enrichment.',
+      description: 'n8n workflow for lead search, profile scraping, enrichment, and CRM or Google Sheets sync.',
       color: 'bg-neon',
       component: <WorkflowVisualizer />
     },
     {
       id: 'maps',
       title: 'Google Maps Scraper',
-      description: 'Zero-cost hyper-local business data harvesting.',
+      description: 'Geospatial workflow for local business discovery, enrichment, and CSV or Excel export.',
       color: 'bg-orange-500',
       component: <MapsWorkflowVisualizer />
     },
     {
       id: 'raya',
       title: 'Raya AI (Beta)',
-      description: 'AI-powered skincare analysis mobile app.',
+      description: 'Mobile app concept for skin analysis, product comparison, and routine tracking with Gemini and OpenAI.',
       color: 'bg-pink-500',
       component: <RayaAiVisualizer />
     },
     {
       id: 'data-tool',
       title: 'Data Instruction Tool',
-      description: 'AI-driven ETL & Classification Engine.',
+      description: 'Python framework for Excel comparison, web scraping, fuzzy matching, TF-IDF, and Gemini classification.',
       color: 'bg-cyan-500',
       component: <DataInstructionVisualizer />
     }
@@ -52,11 +52,11 @@ const BentoGrid: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative" aria-labelledby="projects-title">
       <div className="container mx-auto px-6 relative">
         <div className="mb-12">
-          <h2 className="font-display text-4xl font-bold mb-4 text-slate-900 dark:text-white">Selected Work</h2>
-          <p className="text-slate-600 dark:text-gray-400">Architecting intelligent systems and digital workers.</p>
+          <h2 id="projects-title" className="font-display text-4xl font-bold mb-4 text-slate-900 dark:text-white">Selected Work</h2>
+          <p className="text-slate-600 dark:text-gray-400">AI automation, data engineering, web scraping, and mobile product projects.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
@@ -74,6 +74,9 @@ const BentoGrid: React.FC = () => {
                     onClick={() => toggleProject(project.id)}
                     className="group relative flex items-center justify-center"
                     title={project.title}
+                    aria-label={`Toggle ${project.title} details`}
+                    aria-expanded={activeProject === project.id}
+                    aria-controls={`details-${project.id}`}
                   >
                     <div className={`w-3 h-3 rounded-full transition-all duration-500
                       ${activeProject === project.id && project.id === 'linkedin' ? 'bg-neon shadow-[0_0_10px_2px] shadow-neon/50 scale-125' : ''}
@@ -99,6 +102,8 @@ const BentoGrid: React.FC = () => {
                 {/* Header / Trigger Card */}
                 <button
                   onClick={() => toggleProject(project.id)}
+                  aria-expanded={activeProject === project.id}
+                  aria-controls={`details-${project.id}`}
                   className={`w-full text-left p-5 md:p-8 rounded-3xl border transition-all duration-300 group relative overflow-hidden
                                         ${activeProject === project.id
                       ? 'bg-slate-100 dark:bg-white/5 border-slate-200 dark:border-white/10 mb-6 shadow-lg'
@@ -126,7 +131,7 @@ const BentoGrid: React.FC = () => {
                 </button>
 
                 {/* Expanded Content Area */}
-                <div className={`grid transition-all duration-500 ease-in-out overflow-hidden ${activeProject === project.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div id={`details-${project.id}`} className={`grid transition-all duration-500 ease-in-out overflow-hidden ${activeProject === project.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="min-h-0">
                     {/* Wrapper to handle Grid layouts within the flex container */}
                     {project.id === 'raya' ? (
@@ -145,7 +150,7 @@ const BentoGrid: React.FC = () => {
                           </p>
                           <p className="text-sm font-medium text-slate-500 dark:text-gray-500 mb-4">Interested in early access?</p>
                           <a href="#contact" className="inline-flex justify-center items-center py-3 px-6 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:opacity-90 transition-opacity">
-                            Contact for Demo
+                            Ask About Beta Access
                           </a>
                         </div>
                       </div>

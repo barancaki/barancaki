@@ -12,6 +12,8 @@ import {
     Bot
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { creativeWorkJsonLd } from '../lib/seo';
 
 const DataInstructionTool: React.FC = () => {
 
@@ -20,7 +22,19 @@ const DataInstructionTool: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-6">
+        <main className="pt-24 pb-20 container mx-auto px-6">
+            <SEO
+                title="Data Instruction Tool | Python ETL and AI Classification"
+                description="Case study for a Python data instruction tool that compares Excel files, scrapes websites, performs fuzzy matching, extracts TF-IDF keywords, and classifies data with Gemini."
+                path="/data-instruction-tool"
+                type="article"
+                jsonLd={creativeWorkJsonLd(
+                    'Data Instruction Tool',
+                    'A Python framework for Excel comparison, web scraping, fuzzy matching, TF-IDF keyword extraction, and Gemini classification.',
+                    ['Python', 'Excel', 'Selenium', 'AsyncIO', 'Multiprocessing', 'Fuzzy Logic', 'TF-IDF', 'Gemini'],
+                    '/data-instruction-tool',
+                )}
+            />
             {/* Back Button */}
             <Link to="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white mb-12 transition-colors">
                 <ArrowLeft size={20} />
@@ -34,7 +48,7 @@ const DataInstructionTool: React.FC = () => {
                     <span>Data Engineering & ML</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    The Ultimate <span className="text-orange-600 dark:text-orange-400">Data Instruction</span> Engine.
+                    A <span className="text-orange-600 dark:text-orange-400">Data Instruction</span> engine for comparison and classification.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
                     A heavy-duty Python framework for extracting, comparing, and classifying massive datasets using parallel processing and generative AI.
@@ -43,6 +57,7 @@ const DataInstructionTool: React.FC = () => {
 
             {/* Core Capabilities Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+                <h2 className="sr-only">Data Instruction Tool Capabilities</h2>
                 <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-white/5 relative overflow-hidden group">
                     <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                         <FileSpreadsheet size={120} />
@@ -51,7 +66,7 @@ const DataInstructionTool: React.FC = () => {
                         <Merge className="text-orange-500" /> Smart Comparison
                     </h3>
                     <p className="text-slate-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Algorithmically compares multiple Excel files to identify discrepancies. Features a <strong>Fuzzy Logic</strong> engine that detects "80% matches" (e.g., "Apple Inc." vs "Apple Incorporated"), reducing manual review by 90%.
+                        Algorithmically compares multiple Excel files to identify discrepancies. Features a <strong>Fuzzy Logic</strong> engine that detects partial matches such as "Apple Inc." and "Apple Incorporated" for faster manual review.
                     </p>
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-gray-400">
                         <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>Row-by-row & Column-mapping analysis</li>
@@ -76,6 +91,21 @@ const DataInstructionTool: React.FC = () => {
                 </div>
             </div>
 
+            <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-24" aria-labelledby="data-tool-overview">
+                <h2 id="data-tool-overview" className="sr-only">Project Overview</h2>
+                {[
+                    ['Context', 'Large data review tasks can involve Excel comparison, website scraping, duplicate detection, and manual classification.'],
+                    ['What was built', 'A Python framework that extracts, compares, classifies, and exports structured data through a repeatable pipeline.'],
+                    ['Technologies used', 'Python, Selenium, AsyncIO, Multiprocessing, Fuzzy Logic, Levenshtein distance, TF-IDF, Gemini, Excel, and SQL Database.'],
+                    ['Purpose', 'Support faster review of spreadsheet and website data by combining deterministic matching with AI classification.'],
+                ].map(([title, body]) => (
+                    <article key={title} className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+                        <p className="text-slate-600 dark:text-gray-400 leading-relaxed">{body}</p>
+                    </article>
+                ))}
+            </section>
+
             {/* Technical Detail Section */}
             <div className="bg-slate-900 rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
                 {/* Decorative background grid */}
@@ -85,7 +115,7 @@ const DataInstructionTool: React.FC = () => {
                     <div>
                         <h2 className="text-3xl font-display font-bold text-white mb-6">Built for Speed & Scale</h2>
                         <p className="text-gray-400 mb-8 leading-relaxed">
-                            Web scraping and data processing can be painfully slow. This tool leverages <strong>Python's AsyncIO</strong> and <strong>Multiprocessing</strong> to run tasks in parallel, turning hour-long jobs into minute-long sprints.
+                            Web scraping and data processing can be slow when tasks run sequentially. This tool leverages <strong>Python's AsyncIO</strong> and <strong>Multiprocessing</strong> to run scraping and processing tasks in parallel.
                         </p>
 
                         <div className="space-y-6">
@@ -145,7 +175,7 @@ const DataInstructionTool: React.FC = () => {
                 </a>
             </div>
 
-        </div>
+        </main>
     );
 };
 

@@ -79,6 +79,7 @@ const RayaAiVisualizer: React.FC = () => {
                             <button
                                 onClick={startScan}
                                 className="px-6 py-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white text-sm font-bold shadow-lg shadow-pink-500/25 hover:scale-105 transition-transform"
+                                aria-label="Start Raya AI skin scan demo"
                             >
                                 Start Scan
                             </button>
@@ -158,6 +159,7 @@ const RayaAiVisualizer: React.FC = () => {
                             <button
                                 onClick={() => setScanState('idle')}
                                 className="mt-4 w-full py-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs text-slate-300 transition-colors"
+                                aria-label="Reset Raya AI demo"
                             >
                                 Done
                             </button>

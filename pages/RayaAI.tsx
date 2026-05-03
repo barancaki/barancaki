@@ -12,6 +12,8 @@ import {
     Camera
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { creativeWorkJsonLd } from '../lib/seo';
 
 const RayaAI: React.FC = () => {
 
@@ -20,7 +22,19 @@ const RayaAI: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-6">
+        <main className="pt-24 pb-20 container mx-auto px-6">
+            <SEO
+                title="Raya AI | AI Skincare Mobile App Case Study"
+                description="Case study for Raya AI, a beta mobile app using Gemini, OpenAI, Firebase, TensorFlow Lite, and Node.js for skin analysis, product comparison, and progress tracking."
+                path="/raya-ai"
+                type="article"
+                jsonLd={creativeWorkJsonLd(
+                    'Raya AI',
+                    'An AI-powered skincare mobile app concept for skin analysis, product comparison, and routine progress tracking.',
+                    ['React Native', 'Flutter', 'Firebase', 'Gemini Vision API', 'OpenAI API', 'TensorFlow Lite', 'Node.js'],
+                    '/raya-ai',
+                )}
+            />
             {/* Back Button */}
             <Link to="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white mb-12 transition-colors">
                 <ArrowLeft size={20} />
@@ -34,15 +48,16 @@ const RayaAI: React.FC = () => {
                     <span>AI Beauty Tech</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    Skincare meets <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">Artificial Intelligence</span> via Gemini.
+                    Skincare analysis with <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">Gemini and OpenAI</span>.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                    A mobile application that turns your daily selfie into a comprehensive dermatological report, powered by advanced computer vision and LLMs.
+                    A beta mobile application concept that uses computer vision and LLMs to support skin analysis, product comparison, and routine progress tracking.
                 </p>
             </div>
 
             {/* Feature Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+                <h2 className="sr-only">Raya AI Features</h2>
                 <div className="glass-card p-6 rounded-2xl border border-pink-100 dark:border-white/5 hover:border-pink-300 dark:hover:border-pink-500/30 transition-all">
                     <div className="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center mb-4 text-pink-600 dark:text-pink-400">
                         <Camera size={24} />
@@ -55,7 +70,7 @@ const RayaAI: React.FC = () => {
                         <BrainCircuit size={24} />
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">Gemini & OpenAI</h3>
-                    <p className="text-sm text-slate-600 dark:text-gray-400">Dual-engine AI analysis for dermatologist-grade accuracy and recommendations.</p>
+                    <p className="text-sm text-slate-600 dark:text-gray-400">Dual-engine AI analysis for structured skin observations and recommendations.</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl border border-pink-100 dark:border-white/5 hover:border-pink-300 dark:hover:border-pink-500/30 transition-all">
                     <div className="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-500/10 flex items-center justify-center mb-4 text-rose-600 dark:text-rose-400">
@@ -73,15 +88,30 @@ const RayaAI: React.FC = () => {
                 </div>
             </div>
 
+            <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-24" aria-labelledby="raya-overview">
+                <h2 id="raya-overview" className="sr-only">Project Overview</h2>
+                {[
+                    ['Context', 'Skin tracking requires repeatable image analysis, product context, and progress views that are understandable to everyday users.'],
+                    ['What was built', 'A mobile app experience for daily skin scans, recommendations, product comparisons, and visual progress tracking.'],
+                    ['Technologies used', 'React Native, Flutter, Firebase, Gemini Vision API, OpenAI API, TensorFlow Lite, and Node.js.'],
+                    ['Purpose', 'Help users review skin observations and compare routine changes over time in a beta mobile workflow.'],
+                ].map(([title, body]) => (
+                    <article key={title} className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+                        <p className="text-slate-600 dark:text-gray-400 leading-relaxed">{body}</p>
+                    </article>
+                ))}
+            </section>
+
             {/* Deep Dive Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
-                    <h2 className="font-display text-3xl font-bold text-slate-900 dark:text-white">The Technical Challenge</h2>
+                    <h2 className="font-display text-3xl font-bold text-slate-900 dark:text-white">Technical Context</h2>
                     <p className="text-slate-600 dark:text-gray-400 leading-relaxed">
                         Skin analysis requires more than just standard image classification. We needed to detect subtle texture nuances, redness patterns, and hydration levels that vary by lighting conditions.
                     </p>
                     <p className="text-slate-600 dark:text-gray-400 leading-relaxed">
-                        We utilized <strong>Gemini Vision Pro</strong> for its superior texture recognition capabilities, combined with OpenAI's reasoning engine to generate human-readable, empathetic advice based on the raw data.
+                        The app uses <strong>Gemini Vision Pro</strong> for visual analysis and OpenAI for human-readable guidance based on the extracted observations.
                     </p>
 
                     <div className="p-6 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5">
@@ -120,12 +150,12 @@ const RayaAI: React.FC = () => {
 
             <div className="mt-24 text-center">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Ready to transform your routine?</h2>
-                <button className="px-8 py-4 rounded-full bg-pink-500 text-white font-bold hover:bg-pink-600 transition-all shadow-[0_4px_20px_-5px_rgba(236,72,153,0.4)]">
-                    Download Beta
-                </button>
+                <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-pink-500 text-white font-bold hover:bg-pink-600 transition-all shadow-[0_4px_20px_-5px_rgba(236,72,153,0.4)]">
+                    Ask About Beta Access
+                </a>
             </div>
 
-        </div>
+        </main>
     );
 };
 

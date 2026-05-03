@@ -97,6 +97,7 @@ const DataInstructionVisualizer: React.FC = () => {
                     <button
                         onClick={startProcessing}
                         disabled={processState !== 'idle'}
+                        aria-label="Run the data instruction pipeline demo"
                         className={`mt-auto py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2
                             ${processState === 'idle'
                                 ? 'bg-neon hover:bg-orange-700 text-white shadow-lg shadow-orange-500/20'

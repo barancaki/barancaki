@@ -12,6 +12,8 @@ import {
     Coins
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { creativeWorkJsonLd } from '../lib/seo';
 
 const GoogleMapsScraper: React.FC = () => {
 
@@ -20,7 +22,19 @@ const GoogleMapsScraper: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-6">
+        <main className="pt-24 pb-20 container mx-auto px-6">
+            <SEO
+                title="Google Maps Scraper | Local Business Data Case Study"
+                description="Case study for a local business intelligence workflow that searches map grids, extracts place data, enriches business records from websites, and exports clean CSV datasets."
+                path="/google-maps-scraper"
+                type="article"
+                jsonLd={creativeWorkJsonLd(
+                    'Google Maps Scraper',
+                    'A geospatial business data workflow for local search, place extraction, website enrichment, and CSV export.',
+                    ['Google Maps', 'web scraping', 'CSV', 'Excel', 'local business data', 'geospatial search'],
+                    '/google-maps-scraper',
+                )}
+            />
             {/* Back Button */}
             <Link to="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white mb-12 transition-colors">
                 <ArrowLeft size={20} />
@@ -34,16 +48,16 @@ const GoogleMapsScraper: React.FC = () => {
                     <span>Local Business Intelligence</span>
                 </div>
                 <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-                    Unlock <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 dark:from-orange-400 dark:to-red-400">Hyper-Local</span> market data at scale.
+                    A <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 dark:from-orange-400 dark:to-red-400">hyper-local business data</span> workflow.
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                    A geospatial harvesting engine that maps, extracts, and enriches data from every local business in any city.
-                    Zero missed leads. Zero API costs.
+                    A geospatial workflow that defines a target area, searches map grids, extracts place data, enriches business records from websites, and exports clean local lead datasets.
                 </p>
             </div>
 
             {/* Stats / Outcomes */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-5xl mx-auto">
+                <h2 className="sr-only">Google Maps Scraper Outcomes</h2>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
                     <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
                         <Zap size={24} />
@@ -56,7 +70,7 @@ const GoogleMapsScraper: React.FC = () => {
                         <Target size={24} />
                     </div>
                     <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">100%</h3>
-                    <p className="text-slate-600 dark:text-gray-400">Coverage (Grid Search)</p>
+                    <p className="text-slate-600 dark:text-gray-400">Grid Search Coverage</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
                     <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-500/10 flex items-center justify-center mx-auto mb-4 text-green-600 dark:text-green-400">
@@ -66,6 +80,21 @@ const GoogleMapsScraper: React.FC = () => {
                     <p className="text-slate-600 dark:text-gray-400">API Cost</p>
                 </div>
             </div>
+
+            <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-24" aria-labelledby="maps-overview">
+                <h2 id="maps-overview" className="sr-only">Project Overview</h2>
+                {[
+                    ['Context', 'Local market research often requires collecting business names, locations, phone numbers, ratings, websites, and contact channels across dense map areas.'],
+                    ['What was built', 'A grid-based scraping workflow that searches sub-areas, extracts place records, enriches data from websites, and removes duplicates.'],
+                    ['Technologies used', 'Google Maps, web scraping, website enrichment, CSV, and Excel export.'],
+                    ['Purpose', 'Create structured local business datasets for cold calling or email marketing campaigns.'],
+                ].map(([title, body]) => (
+                    <article key={title} className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+                        <p className="text-slate-600 dark:text-gray-400 leading-relaxed">{body}</p>
+                    </article>
+                ))}
+            </section>
 
             {/* Deep Dive Steps */}
             <div className="max-w-4xl mx-auto space-y-8">
@@ -103,7 +132,7 @@ const GoogleMapsScraper: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">2. Intelligent Grid Division</h3>
                             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-4">
-                                Google Maps limits results to 120 per search. To bypass this, our agent divides the target area into a micro-grid of sub-coordinates. It recursively searches each cell, ensuring no business is left behind, even in dense areas like downtown Manhattan.
+                                Google Maps limits how many results appear per search. The workflow divides the target area into a micro-grid of sub-coordinates and searches each cell to improve coverage in dense areas.
                             </p>
                         </div>
                     </div>
@@ -162,11 +191,11 @@ const GoogleMapsScraper: React.FC = () => {
             <div className="mt-24 text-center">
                 <p className="text-slate-500 dark:text-gray-500 mb-6">Need local data?</p>
                 <a href="/#contact" className="inline-block px-8 py-4 rounded-full bg-orange-500 text-white font-bold hover:bg-orange-600 transition-all shadow-[0_4px_20px_-5px_rgba(249,115,22,0.4)] dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.5)]">
-                    Start Harvesting
+                    Discuss Local Data
                 </a>
             </div>
 
-        </div>
+        </main>
     );
 };
 

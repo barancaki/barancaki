@@ -5,6 +5,8 @@ import Timeline from '../components/Timeline';
 import Contact from '../components/Contact';
 import Certificates from '../components/Certificates';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { personJsonLd, websiteJsonLd } from '../lib/seo';
 
 const Home: React.FC = () => {
     const location = useLocation();
@@ -20,6 +22,13 @@ const Home: React.FC = () => {
 
     return (
         <main>
+            <SEO
+                title="Baran Çakı | AI Engineer & Automation Engineer"
+                description="Portfolio of Baran Çakı, an AI Engineer and Automation Engineer building n8n workflows, Python automation, web scraping systems, and AI-powered products."
+                path="/"
+                type="profile"
+                jsonLd={[personJsonLd, websiteJsonLd]}
+            />
             <Hero />
             <BentoGrid />
             <Certificates />

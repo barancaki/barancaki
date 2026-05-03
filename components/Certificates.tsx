@@ -43,14 +43,14 @@ const CERTIFICATES: Certificate[] = [
 
 const Certificates: React.FC = () => {
     return (
-        <section id="certificates" className="py-20 bg-slate-50/50 dark:bg-void/30">
+        <section id="certificates" className="py-20 bg-slate-50/50 dark:bg-void/30" aria-labelledby="certificates-title">
             <div className="container mx-auto px-6">
                 <div className="mb-12">
-                    <h2 className="font-display text-4xl font-bold mb-4 text-slate-900 dark:text-white flex items-center gap-3">
+                    <h2 id="certificates-title" className="font-display text-4xl font-bold mb-4 text-slate-900 dark:text-white flex items-center gap-3">
                         <Award className="text-neon" size={32} />
                         Certificates
                     </h2>
-                    <p className="text-slate-600 dark:text-gray-400">Continuous learning and professional development.</p>
+                    <p className="text-slate-600 dark:text-gray-400">Relevant training in generative AI, machine learning, deep learning, and version control.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
