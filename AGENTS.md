@@ -1,1 +1,0 @@
-For all questions, first perform short keyword searches using MCP memory (mempalace_search), then generate a response.
