@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-4 flex items-center justify-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span className="text-sm font-medium text-orange-600 dark:text-neon tracking-widest uppercase">AI Automation Portfolio</span>
+            <span className="text-sm font-medium text-orange-600 dark:text-neon tracking-widest uppercase">Solving Problems</span>
           </div>
 
           <h1 id="home-title" className="font-display text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-tight text-slate-900 dark:text-white">
