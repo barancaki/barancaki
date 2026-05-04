@@ -31,7 +31,7 @@ const LinkedinLeadGen: React.FC = () => {
                 jsonLd={creativeWorkJsonLd(
                     'LinkedIn Lead Gen Engine',
                     'An n8n automation workflow for lead search, profile extraction, enrichment, validation, and CRM or Google Sheets sync.',
-                    ['n8n', 'Google Custom Search Engines', 'LinkedIn', 'CRM', 'Google Sheets', 'lead generation'],
+                    ['n8n', 'LinkedIn', 'CRM', 'Google Sheets', 'lead generation'],
                     '/linkedin-lead-gen',
                 )}
             />
@@ -62,14 +62,14 @@ const LinkedinLeadGen: React.FC = () => {
                     <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-neon/10 flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-neon">
                         <Zap size={24} />
                     </div>
-                    <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">10x</h3>
+                    <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">77x</h3>
                     <p className="text-slate-600 dark:text-gray-400">Faster than Manual Search</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
                     <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-500/10 flex items-center justify-center mx-auto mb-4 text-green-600 dark:text-green-400">
                         <ShieldCheck size={24} />
                     </div>
-                    <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">99%</h3>
+                    <h3 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white">90%</h3>
                     <p className="text-slate-600 dark:text-gray-400">Verified Email Delivery</p>
                 </div>
                 <div className="glass-card p-6 rounded-2xl text-center hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all">
@@ -86,7 +86,7 @@ const LinkedinLeadGen: React.FC = () => {
                 {[
                     ['Context', 'Manual lead research creates repetitive search, extraction, validation, and formatting work before outreach can begin.'],
                     ['What was built', 'An n8n workflow that turns defined audience criteria into structured lead records.'],
-                    ['Technologies used', 'n8n, Google Custom Search Engines, LinkedIn profile extraction, SMTP validation, CRM, and Google Sheets.'],
+                    ['Technologies used', 'n8n, LinkedIn profile extraction, SMTP validation, CRM, and Google Sheets.'],
                     ['Purpose', 'Prepare cleaner lead data for sales outreach with less manual data entry.'],
                 ].map(([title, body]) => (
                     <article key={title} className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5">
@@ -132,7 +132,7 @@ const LinkedinLeadGen: React.FC = () => {
                         <div>
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">2. Search Agent Execution</h3>
                             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-4">
-                                The workflow uses <strong>Google Custom Search Engines (CSE)</strong> and advanced boolean logic to find public LinkedIn profile results that match the selected criteria.
+                                The workflow uses advanced boolean logic to find public LinkedIn profile results that match the selected criteria.
                             </p>
                         </div>
                     </div>
